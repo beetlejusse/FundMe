@@ -1,66 +1,56 @@
-## Foundry
+# FUNDME
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+A funding-based smart contract written in **Solidity** using **Foundry**  
+*Currently available on Ethereum testnets*
 
-Foundry consists of:
+---
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## 🚀 Overview
 
-## Documentation
+**FUNDME** is a decentralized smart contract that allows users to create funding campaigns and receive Ether from contributors. Built using the **Foundry** framework, the project aims to make development, testing, and deployment fast and simple.
 
-https://book.getfoundry.sh/
+---
 
-## Usage
+## Features
 
-### Build
+- ✅ Developed in Solidity
+- ✅ Built and tested using Foundry
+- ✅ Pre-configured Makefile for automation
+- ✅ Easily deployable to testnets like Sepolia
 
-```shell
-$ forge build
+---
+
+##  Prerequisites
+
+Before running the project, ensure the following tools are installed:
+
+- [Foundry](https://book.getfoundry.sh/foundry/getting-started/installation)
+- [Make](https://www.gnu.org/software/make/) (For running Makefile commands)
+- Ethereum-compatible wallet (e.g., MetaMask)
+- RPC URL and private key for deployment (Check `.env` file handling in your setup)
+
+---
+
+## 🛠️ How to Build and Deploy
+
+The project uses a `Makefile` for simplified automation. Follow the steps below:
+
+### Step 1 – Build the Contract
+```
+make build
+```
+### Step 2 – Deploy to Sepolia Testnet
+```
+make deploy-sepolia
 ```
 
-### Test
+This will compile and  verify and deploy your smart contract.
 
-```shell
-$ forge test
-```
+> Make sure your environment variables (like RPC URL, private key and etherscan api key) are properly set before deploying. Use a `.env` file or export them in your shell.
 
-### Format
+---
 
-```shell
-$ forge fmt
-```
 
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+<div align="center">
+  Made with ❣️
+</div>
